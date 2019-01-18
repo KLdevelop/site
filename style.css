@@ -1,5 +1,21 @@
 body{
     background: #8ED3E6;
-    font-size: 1.2em;
-    color:royalblue;
+    color:#FFFAFA;
+}
+.menu,a{
+    text-align: right;
+    text-decoration: none;
+    padding: 30px;
+    color:#FFFFF0;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    transition: 0.3s linear;
+}
+.menu,a:hover{
+    text-align: right;
+    text-decoration: none;
+    padding: 30px;
+    color:rgb(215, 250, 166);
+    font-size: 1.3em;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    transition: 0.3s linear;
 }
