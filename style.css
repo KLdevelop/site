@@ -11,11 +11,15 @@ body{
     transition: 0.3s linear;
 }
 .menu,a:hover{
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     padding: 30px;
+    padding-bottom: 20px;
     color:rgb(215, 250, 166);
     font-size: 1.3em;
     font-family: 'ZCOOL KuaiLe', cursive;
     transition: 0.3s linear;
+}
+hr{
+    margin-top: 15px;
 }
