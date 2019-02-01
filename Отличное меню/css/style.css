@@ -38,19 +38,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	text-transform: uppercase;
 	transition: all 0.5s ease;
 }
-
-
-
 .dws-menu > ul li{
 	position: relative;
 	border-right: 1px solid #c7c8ca; 
 }
+
+
+
 .dws-menu > ul li > a i.fa{
 	position: absolute;
 	top: 15px;
 	left: 12px;
 	font-size: 18px;
 }
+
+
+
 .dws-menu > ul li:first-child{
 	border-left: 1px solid #b2b3b5;
 }
@@ -58,8 +61,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	border-left: 1px solid #b2b3b5;
 }
 
+
+
+
 .dws-menu li a:hover{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaeaea+0,8c8c8c+100&0.9+41,1+76,1+76 */
 background: -moz-linear-gradient(top, rgba(234,234,234,0.9) 0%, rgba(195,195,195,0.9) 41%, rgba(162,162,162,1) 76%, rgba(140,140,140,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(234,234,234,0.9) 0%,rgba(195,195,195,0.9) 41%,rgba(162,162,162,1) 76%,rgba(140,140,140,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(234,234,234,0.9) 0%,rgba(195,195,195,0.9) 41%,rgba(162,162,162,1) 76%,rgba(140,140,140,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
