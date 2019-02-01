@@ -18,16 +18,15 @@ header{
 .dws-menu ol{
 	list-style: none;
 }
-
-
-
 .dws-menu > ul{
 	display: flex;
 	justify-content: center;
 }
+
+
+
 .dws-menu > ul li a{
 	display: block;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D */
 background: #eeeeee; /* Old browsers */
 background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
