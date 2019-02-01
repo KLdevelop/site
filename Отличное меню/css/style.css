@@ -94,3 +94,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6eaeaea', e
 	color: #696969;
 }
 
+
+=---------=
+.menu,a{
+    text-align: right;
+    text-decoration: none;
+    padding: 30px;
+    color:#FFFFF0;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    transition: 0.3s linear;
+}
+.menu,a:hover{
+    text-align: center;
+    text-decoration: none;
+    padding: 30px;
+    padding-bottom: 20px;
+    color:rgb(215, 250, 166);
+    font-size: 1.3em;
+    transition: 0.3s linear;
+}
+hr{
+    margin-top: 15px;
+}
