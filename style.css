@@ -34,9 +34,13 @@ body{
 .menu > ul li{
 	position: relative;
 	border-right: 1px solid #D3BA9E; /*DELETE*/
+<<<<<<< HEAD
 
 }
 
+=======
+}
+>>>>>>> e261cb612fd43bf26e0e030e7623a66f2362d106
 .menu li a:hover{
 	background: #C4AD93;
 		color: #ffffff;
