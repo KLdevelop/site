@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum');
 body{
-	background-image: url('../img/ep_naturalwhite.png');
+	background-image: url('http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7239.png');
 }
 header{
 	margin-top: 200px;
@@ -38,6 +38,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	text-transform: uppercase;
 	transition: all 0.5s ease;
 }
+
+
+
 .dws-menu > ul li{
 	position: relative;
 	border-right: 1px solid #c7c8ca; 

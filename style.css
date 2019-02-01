@@ -1,5 +1,4 @@
 body{
-    background: #8ED3E6;
     color:#FFFAFA;
 	font-family: 'ZCOOL KuaiLe', cursive;
 	background-image: url('http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7239.png');
@@ -29,4 +28,4 @@ body{
 	font-size: 14px;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: all 0.5s ease;
+	transition: all 0.5s ease;}
