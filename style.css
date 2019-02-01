@@ -35,10 +35,36 @@ body{
 	position: relative;
 	border-right: 1px solid #D3BA9E; /*DELETE*/
 }
-
 .menu li a:hover{
 	background: #C4AD93;
 		color: #ffffff;
 		box-shadow: 1px 5px 10px -5px rgb(185, 143, 3);
 		transition: all 0.5s ease;
 	}
+.menu li ul{
+	position: absolute;
+	min-width: 150px;
+	display: none;
+}
+
+.menu li > ul li{
+	border: 1px solid #B59D81;/*DELETE*/
+}
+.menu li > ul li a{
+	padding: 10px;
+	text-transform: none;
+	background: #E2C5A5;
+}
+
+.menu li > ul li ul{
+	position: absolute;/*delete*/
+	right: -150px;
+	top: 0;
+}
+
+.menu li:hover > ul{
+	display: block;
+}
+.menu a{
+	color: #988269;
+}
