@@ -43,7 +43,7 @@ body{
 >>>>>>> e261cb612fd43bf26e0e030e7623a66f2362d106
 .menu li a:hover{
 	background: #C4AD93;
-		color: #ffffff;
+		color: #988269;
 		box-shadow: 1px 5px 10px -5px rgb(185, 143, 3);
 		transition: all 0.5s ease;
 	}
@@ -70,7 +70,4 @@ body{
 
 .menu li:hover > ul{
 	display: block;
-}
-.menu a{
-	color: #988269;
 }
