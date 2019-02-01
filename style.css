@@ -18,12 +18,14 @@ body{
 	justify-content: center;
 }
 .menu > ul li a{
+	border:1px solid #F5D6B3;
+	border-radius: 7px;
 	display: block;
     background: #eeeeee;
-    background: -moz-linear-gradient(top, #FAEEDD 0%, #E2C5A5 100%);
-    background: -webkit-linear-gradient(top, #FAEEDD 0%,#E2C5A5 100%);
-    background: linear-gradient(to bottom, #FAEEDD 0%,#E2C5A5 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FAEEDD', endColorstr='#E2C5A5',GradientType=0 );
+    background: -moz-linear-gradient(top, #FFE3C4 0%, #F0CBA2 100%);
+    background: -webkit-linear-gradient(top, #FFE3C4 0%,#F0CBA2 100%);
+    background: linear-gradient(to bottom, #FFE3C4 0%,#F0CBA2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE3C4', endColorstr='#F0CBA2',GradientType=0 );
 	padding: 15px 30px 15px 40px;
 	font-size: 14px;
 	text-decoration: none;
@@ -33,7 +35,9 @@ body{
 
 .menu > ul li{
 	position: relative;
-	border-right: 1px solid #D3BA9E; /*DELETE*/
+	border:1px solid #D3BA9E;
+	border-radius: 7px;
+	
 }
 .menu li a:hover{
 	background: #C4AD93;
@@ -53,9 +57,9 @@ body{
 .menu li > ul li a{
 	padding: 10px;
 	text-transform: none;
-	background: #E2C5A5;
+	background: #F5D6B3;
 }
-
+/*#F0CBA2*/
 .menu li > ul li ul{
 	position: absolute;/*delete*/
 	right: -150px;
@@ -66,8 +70,11 @@ body{
 	display: block;
 }
 .menu a{
-	color: #988269;
+	color: #b49b7d;
 }
 .menu a:hover{
-	color: rgb(196, 167, 134);
+	color: rgb(134, 114, 90);
+}
+ots{
+	margin:10px;
 }
