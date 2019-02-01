@@ -3,6 +3,7 @@ body{
     color:#FFFAFA;
     font-family: 'ZCOOL KuaiLe', cursive;
 }
-.menu{
-    text-align: center;
+.menu *{
+    margin: 0;
+	padding: 0;
 }
