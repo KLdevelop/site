@@ -7,3 +7,13 @@ body{
     margin: 0;
 	padding: 0;
 }
+.menu ol{
+	list-style: none;
+}
+.menu ul{
+	list-style: none;
+}
+.menu > ul{
+	display: flex;
+	justify-content: center;
+}
