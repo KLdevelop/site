@@ -65,3 +65,9 @@ body{
 .menu li:hover > ul{
 	display: block;
 }
+.menu a{
+	color: #988269;
+}
+.menu a:hover{
+	color: rgb(196, 167, 134);
+}
