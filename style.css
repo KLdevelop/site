@@ -1,30 +1,30 @@
 body{
-    color:#AC9377;
+    color:#B5B5FF;
 	font-family: 'ZCOOL KuaiLe', cursive;
-	background-image: url('http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7239.png');
+	background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
 }
 .menu *{
     margin: 0;
 	padding: 0;
 }
 .menu ol{
+	
 	list-style: none;
 }
 .menu ul{
+	
 	list-style: none;
 }
 .menu > ul{
+	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 }
 .menu > ul li a{
-	border:1px solid #F5D6B3;
+	border:1px solid rgb(49, 49, 131);
 	border-radius: 7px;
 	display: block;
-    background: #eeeeee;
-    background: -moz-linear-gradient(top, #FFE3C4 0%, #F0CBA2 100%);
-    background: -webkit-linear-gradient(top, #FFE3C4 0%,#F0CBA2 100%);
-    background: linear-gradient(to bottom, #FFE3C4 0%,#F0CBA2 100%);
+    background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE3C4', endColorstr='#F0CBA2',GradientType=0 );
 	padding: 15px 30px 15px 40px;
 	font-size: 14px;
@@ -35,14 +35,14 @@ body{
 
 .menu > ul li{
 	position: relative;
-	border:1px solid #D3BA9E;
+	border:1px solid rgb(57, 57, 134);
 	border-radius: 7px;
 	
 }
 .menu li a:hover{
-	background: #C4AD93;
-		color: #988269;
-		box-shadow: 1px 5px 10px -5px rgb(185, 143, 3);
+		background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
+		color: #B5B5FF;
+		box-shadow: 1px 5px 10px -5px rgb(93, 113, 223);
 		transition: all 0.5s ease;
 	}
 .menu li ul{
@@ -52,14 +52,13 @@ body{
 }
 
 .menu li > ul li{
-	border: 1px solid #B59D81;/*DELETE*/
+	border: 1px solid rgb(57, 57, 134);/*DELETE*/
 }
 .menu li > ul li a{
 	padding: 10px;
 	text-transform: none;
-	background: #F5D6B3;
+	background: rgb(69, 69, 143);
 }
-/*#F0CBA2*/
 .menu li > ul li ul{
 	position: absolute;/*delete*/
 	right: -150px;
@@ -70,8 +69,70 @@ body{
 	display: block;
 }
 .menu a{
-	color: #b49b7d;
+	color: #C9E3FF;
 }
 .menu a:hover{
-	color: rgb(134, 114, 90);
+	color:  rgb(183, 244, 255);
 }
+/*Date*/
+.menu .Date {
+	position: absolute;
+	right: 0;
+	top :0;
+	margin-top: 8px;
+	margin-right: 10px;
+	background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+  }
+  html,
+  body {
+	height: 100%;
+  }
+  .wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+  }
+  .content {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 100px;
+	flex: 1 0 auto;
+  }
+
+/*Footer*/
+#footer {
+	margin-top: 30px;
+	flex: 0 0 auto;
+	height: 50px;
+	background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
+  }
+  #footer p{padding-top: 15px;}
+  #footer a{margin-left:10px;text-decoration: none;color:rgb(183, 244, 255); }
+  clll{color: rgb(126, 126, 196);padding-left: 20px;}
+
+  /*ScrollBar*/
+
+  ::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+	}
+	
+	::-webkit-scrollbar-track {
+	background: rgb(126, 126, 196);
+	
+	}
+	
+	::-webkit-scrollbar-thumb {
+	
+	background: rgb(57, 57, 134); 
+	border-radius: 5px;
+	}
+	
+	::-webkit-scrollbar-thumb:hover {
+	background: rgb(48, 48, 114);  
+	}
