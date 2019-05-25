@@ -110,6 +110,7 @@ body{
 	margin-top: 30px;
 	flex: 0 0 auto;
 	height: 50px;
+	text-align: center;
 	background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
   }
   #footer p{padding-top: 15px;}
@@ -136,3 +137,12 @@ body{
 	::-webkit-scrollbar-thumb:hover {
 	background: rgb(48, 48, 114);  
 	}
+
+
+
+
+/*Claculator*/
+
+
+
+

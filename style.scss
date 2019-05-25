@@ -1,0 +1,442 @@
+@import "compass/css3";
+//Palette
+$colorPrimary: #ff4b1f;
+$colorFront: #fcfcfc;
+$colorBack: #323232; 
+$colorFrontSubtle: #7c7c7c;
+$colorBackSubtle: #bdbdbd;
+
+//Sizes
+$size-xs: .5rem;
+$size-sm: 1rem;
+$size-md: 2rem;
+$size-lg: 3rem;
+$size-base: 4rem;
+$size-mp: 1rem;
+$size-font: 1.25rem;
+
+/* Predefined Break-points */
+$mediaMaxWidth: 1260px;
+$mediaMidWidth: 768px;
+$mediaMinWidth: 480px;
+
+$family: 'Lato', sans-serif;
+  
+*, *:before, *:after, *:active, *:hover, *:focus {
+  box-sizing: border-box;
+  outline:none !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  font-weight:300;
+  font-family: $family;
+  background: linear-gradient(#f46f48, #eb3434);
+}
+.container {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  overflow:hidden;
+}
+
+.calc{
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  top:0%;
+  left:0%;
+  //transition:all .25s ease-out;
+  @media (min-width: $mediaMidWidth){
+    width: 80vw;
+    height: 80vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.14);
+    //transition:all .25s ease-out;
+  }
+  &_wrapper {
+    width: 100%;
+    background-color: $colorBack;
+    border-bottom-left-radius:$size-xs;
+    border-bottom-right-radius:$size-xs;
+    height: calc(100% - #{$size-base} * 2);
+    //display: flex;
+    user-select: none;
+  }
+  &_buttons {
+    width: 100%;
+    height: calc(100% - #{$size-base} * 2);
+    display: flex;
+    flex-direction: column;
+    background-color: $colorBack;
+    user-select: none;
+    &.main_controls{
+      position: absolute;
+      width: 100%;
+      top: 8rem;
+      z-index:2;
+      @media (min-width: $mediaMinWidth){
+        width: 50%;
+        left: 50%;
+        padding-left:0;
+      }
+      @media (min-width: $mediaMidWidth){
+        border-bottom-right-radius: $size-xs;
+      }
+    }
+    &.advanced_controls{
+      position: absolute;
+      width: 100%;
+      top: 8rem;
+      z-index: 3;
+      left: -100vw;
+      transition:.5s all ease;
+      @media (min-width: $mediaMinWidth){
+        width: 50%;
+        left: 0;
+        padding-right:0;
+      }
+      @media (min-width: $mediaMidWidth){
+        border-bottom-left-radius: $size-xs;
+      }
+    }
+  }
+  &_buttons-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &_button {
+    flex: 1 1;
+    height: 100%;
+    position: relative;
+    user-select: none;
+    &.clear, &.delete, &.eval{
+      color:$colorPrimary;
+    }
+  }
+  &_display{
+    height: calc(#{$size-base} * 2);
+    background: $colorFront;
+    background-color: $colorFront;
+    @media (min-width: $mediaMidWidth){
+      border-top-left-radius: $size-xs;
+      border-top-right-radius: $size-xs;
+    }
+  }
+  &_clipboard {
+    float: left;
+    display: inline-block;
+    line-height: $size-md;
+    width: $size-md;
+    text-align: center;
+    color: $colorFrontSubtle;
+    font-size: $size-font;
+    cursor: pointer;
+    opacity:.25;
+    &:hover{
+      color: $colorBack;
+      opacity:1;
+    }
+    //transition:opacity .5s ease-out;
+  }
+  &_buttons, &_display {
+    padding: $size-sm;
+  }
+  &_display-query{    
+    font-size: $size-sm;
+    padding-right: $size-sm;
+    color: $colorBack;
+    font-weight: 300;
+    width: 100%;
+    display: inline-block;
+    cursor:pointer;
+    text-align:right;
+    &:hover{
+      .calc_clipboard{
+        opacity:.5;
+      }
+    }
+    .calc_clipboard{
+      line-height: $size-md;
+    }
+    .calc_display-query_text{
+      width: calc(100% - #{$size-md});
+      line-height: $size-md;
+      height: $size-md;
+    }
+  }
+  &_display-query_text{
+    text-align: right;
+    padding-left: $size-xs;
+  }
+  &_display-input{
+    //height: $size-base;
+    line-height: $size-base;
+    font-size: $size-lg;
+    padding-right: $size-sm;
+    color: $colorBack;
+    text-align: right;
+    width: 100%;
+    display: inline-block;
+    border: 0;
+    cursor:pointer;
+    &:hover{
+      .calc_clipboard{
+        opacity:.5;
+      }
+    }
+    .calc_clipboard{
+      line-height: $size-base;
+    }
+    .calc_display-query_text{
+      width: calc(100% - #{$size-base});
+      line-height: $size-md;
+    }
+  }
+  input[type="text"]{
+    border:0;
+    outline:none;
+    user-select:none;
+    font-weight: 300;
+    font-family: $family;
+    cursor: pointer;
+    background:transparent;
+    background-color:transparent;
+  }
+  &_checkbox[type="checkbox"]{
+    display:none;
+  }
+  &_checkbox[type="radio"]{
+    display:none;
+  }
+  textarea {
+    resize: none;
+    border:0;
+    outline:none;
+    //user-select:none;
+    font-weight: 300;
+    font-family: $family;
+    background:transparent;
+    background-color:transparent;
+  }
+  &_text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &_button, &_button-eval {
+    background-color: $colorBack;
+    color: $colorFrontSubtle;
+    cursor: pointer;
+    transition:.25s all ease;
+    user-select:none;
+    &.core {
+      background-color: $colorBack;
+      color: $colorFrontSubtle;
+    }
+    .over {
+      text-decoration:overline;
+      display: inline-block;
+      position:relative;
+      top: 3px;
+      left: -4px;
+    }
+    .sub, .sup,{
+      font-size: 0.65em;
+      position:relative;
+      left: 0.1em;
+    }
+    .sup {
+      top:-0.8em;
+    }
+    .sub {
+      top: .8em;  
+    }
+    &.digit {
+      background-color: $colorBack;
+      color: $colorFront;
+      font-size: $size-font;
+    }
+    &:not(.digit){
+      font-size: $size-sm;
+    }
+    &:hover {
+      color:$colorFront;
+    }
+  }
+  &_color{
+    color: $colorPrimary;
+  }
+  .shift-option{
+    display:none;
+  }
+}
+
+#ShowAdvanced{
+  display:none;
+  &:checked{
+    ~ .show_advanced{
+      //right: calc(100% - #{$size-lg});
+      color:$colorFront;
+    }
+    ~ .show_layer{
+      &.layer_one{
+        right: calc(100% - #{$size-lg} - #{$size-md});
+      }
+      &.layer_two{
+        right: calc(100% - #{$size-lg} - #{$size-md} * 2);
+      }
+    }
+    @media (min-width: $mediaMinWidth){
+      ~ .show_layer{
+        &.layer_one{
+          right: calc(100% - #{$size-md});
+        }
+        &.layer_two{
+          right: calc(100% - #{$size-md} * 2);
+        }
+      }
+    }
+    ~ .calc_wrapper .advanced_controls .calc_button{
+      //color:blue;
+    }
+    ~ .calc_wrapper .advanced_controls{
+      z-index: 3;
+      left: 0;
+    }
+  }
+}
+
+.show_advanced{
+  position:absolute;
+  user-select:none;
+  cursor:pointer;
+  top: 7rem;
+  z-index: 5;
+  background: linear-gradient(#f46f48, #eb3434);
+  color:$colorBack;
+  width: $size-lg;
+  height: $size-md;
+  line-height: $size-md;
+  text-align: center;
+  right: calc(100% - #{$size-lg});
+  transition:right .5s ease;
+  
+  @media (min-width: $mediaMinWidth){
+    display:none;
+  }
+}
+.show_layer{
+  position:absolute;
+  user-select:none;
+  cursor:pointer;
+  top: 7rem;
+  z-index: 4;
+  background: linear-gradient(#f46f48, #eb3434);
+  color:$colorFront;
+  width: $size-md;
+  height: $size-md;
+  line-height: $size-md;
+  text-align: center;
+  right: 100%;
+  transition:right .5s ease;
+  color:$colorBack;
+  transition: .5s all ease-out;
+  
+  @media (min-width: $mediaMinWidth){
+    &.layer_one{
+      right: calc(100% - #{$size-md});
+    }
+    &.layer_two{
+      right: calc(100% - #{$size-md} * 2);
+    }
+  }
+  @media (min-width: $mediaMidWidth){
+    //margin:0 $size-sm;
+    border-radius:$size-md;
+  }
+  &.prev{
+    right: 2rem;
+    &:hover{
+      color:$colorFront;
+    }
+  }
+  &.next{
+    right: 0;
+    &:hover{
+      color:$colorFront;
+    }
+  }
+}
+
+#Layer1{
+  display: none;
+  &:checked{
+    ~ .layer_one{
+      color:$colorFront;
+    }
+  }
+}
+
+#Layer2{
+  display: none;
+  &:checked{
+    ~ .layer_two{
+      color:$colorFront;
+    }
+    ~ .calc_wrapper{
+      .main-option{
+        display:none;
+      }
+      .shift-option{
+        display:flex;
+      }
+    }
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  font-weight: 300;
+  font-family: $family;
+  line-height: $size-md;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-weight: 300;
+  font-family: $family;
+  line-height: $size-md;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-weight: 300;
+  font-family: $family;
+  line-height: $size-md;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-weight: 300;
+  font-family: $family;
+  line-height: $size-md;
+}
