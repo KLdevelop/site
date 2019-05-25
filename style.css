@@ -16,7 +16,7 @@ body{
 	list-style: none;
 }
 .menu > ul{
-	margin-top: 10px;
+	margin-top: 5px;
 	display: flex;
 	justify-content: center;
 }
@@ -76,10 +76,11 @@ body{
 }
 /*Date*/
 .menu .Date {
+	justify-content: center;
 	position: absolute;
 	right: 0;
 	top :0;
-	margin-top: 8px;
+	margin-top: 3px;
 	margin-right: 10px;
 	background-image: url('https://downloops.com/wp-content/uploads/edd/2017/11/OrganicBlue-Simple-Blue-Waves-Motion-Background-Video-Loop-SampleStill.jpg');
 }
@@ -124,13 +125,12 @@ body{
 	
 	::-webkit-scrollbar-track {
 	background: rgb(126, 126, 196);
-	
 	}
 	
 	::-webkit-scrollbar-thumb {
 	
 	background: rgb(57, 57, 134); 
-	border-radius: 5px;
+	border-radius: 7px 0px 0px 7px;
 	}
 	
 	::-webkit-scrollbar-thumb:hover {
